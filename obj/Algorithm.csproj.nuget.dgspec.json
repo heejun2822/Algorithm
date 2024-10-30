@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/joel/Documents/Algorithm/Algorithm.csproj": {}
+  },
+  "projects": {
+    "/Users/joel/Documents/Algorithm/Algorithm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/joel/Documents/Algorithm/Algorithm.csproj",
+        "projectName": "Algorithm",
+        "projectPath": "/Users/joel/Documents/Algorithm/Algorithm.csproj",
+        "packagesPath": "/Users/joel/.nuget/packages/",
+        "outputPath": "/Users/joel/Documents/Algorithm/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/joel/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

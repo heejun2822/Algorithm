@@ -1,0 +1,15 @@
+/Users/joel/Documents/Algorithm/bin/Debug/net8.0/Algorithm
+/Users/joel/Documents/Algorithm/bin/Debug/net8.0/Algorithm.deps.json
+/Users/joel/Documents/Algorithm/bin/Debug/net8.0/Algorithm.runtimeconfig.json
+/Users/joel/Documents/Algorithm/bin/Debug/net8.0/Algorithm.dll
+/Users/joel/Documents/Algorithm/bin/Debug/net8.0/Algorithm.pdb
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.AssemblyInfoInputs.cache
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.AssemblyInfo.cs
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.csproj.CoreCompileInputs.cache
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.sourcelink.json
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.dll
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/refint/Algorithm.dll
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.pdb
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/Algorithm.genruntimeconfig.cache
+/Users/joel/Documents/Algorithm/obj/Debug/net8.0/ref/Algorithm.dll
