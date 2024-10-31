@@ -1,6 +1,4 @@
-using Algorithm;
-
-namespace BOJ_001001
+namespace Algorithm.BOJ.BOJ_001001
 {
     public class Solution : SolutionBOJ
     {
