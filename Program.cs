@@ -1,3 +1,3 @@
-﻿using BOJ_002557;
+﻿using BOJ_001001;
 
 new Solution().Test();

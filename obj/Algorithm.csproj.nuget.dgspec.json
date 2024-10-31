@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/joel/Documents/Algorithm/Algorithm.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\Algorithm\\Algorithm.csproj": {}
   },
   "projects": {
-    "/Users/joel/Documents/Algorithm/Algorithm.csproj": {
+    "C:\\Users\\ASUS\\Documents\\Algorithm\\Algorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/joel/Documents/Algorithm/Algorithm.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Algorithm\\Algorithm.csproj",
         "projectName": "Algorithm",
-        "projectPath": "/Users/joel/Documents/Algorithm/Algorithm.csproj",
-        "packagesPath": "/Users/joel/.nuget/packages/",
-        "outputPath": "/Users/joel/Documents/Algorithm/obj/",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\Algorithm\\Algorithm.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\Algorithm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/joel/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
