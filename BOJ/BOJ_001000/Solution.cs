@@ -11,7 +11,7 @@ namespace BOJ_001000
 
         public override void Run()
         {
-            string[] integers = Console.ReadLine().Split();
+            string[] integers = (Console.ReadLine() ?? "").Split();
             int answer = int.Parse(integers[0]) + int.Parse(integers[1]);
             Console.WriteLine(answer);
         }
