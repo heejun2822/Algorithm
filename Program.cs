@@ -1,3 +1,3 @@
-﻿using Algorithm.BOJ.BOJ_005597;
+﻿using Algorithm.BOJ.BOJ_003052;
 
-new Solution().Test();
+new Solution2().Test();
