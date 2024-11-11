@@ -1,7 +1,7 @@
-﻿using Algorithm.BOJ.BOJ_02720;
+﻿using Algorithm.BOJ.BOJ_02903;
 
-foreach (string inputPath in Solution.InputPaths)
+foreach (string inputPath in Solution2.InputPaths)
 {
     Console.SetIn(new StringReader(File.ReadAllText(inputPath)));
-    Solution.Run([]);
+    Solution2.Run([]);
 }
