@@ -1,4 +1,4 @@
-﻿using Algorithm.BOJ.BOJ_05556;
+﻿using Algorithm.BOJ.BOJ_19947;
 
 foreach (string inputPath in Solution.InputPaths)
 {
