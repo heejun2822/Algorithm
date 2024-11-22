@@ -27,7 +27,7 @@ namespace Algorithm.BOJ.BOJ_02750
                 }
                 arr[subIdx + 1] = target;
             }
-            Console.WriteLine(string.Join('\n', Array.ConvertAll(arr, num => num.ToString())));
+            Console.WriteLine(string.Join('\n', arr));
         }
     }
 }

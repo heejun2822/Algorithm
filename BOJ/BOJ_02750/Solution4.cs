@@ -28,7 +28,7 @@ namespace Algorithm.BOJ.BOJ_02750
                 }
                 (arr[idx], arr[minIdx]) = (arr[minIdx], arr[idx]);
             }
-            Console.WriteLine(string.Join('\n', Array.ConvertAll(arr, num => num.ToString())));
+            Console.WriteLine(string.Join('\n', arr));
         }
     }
 }

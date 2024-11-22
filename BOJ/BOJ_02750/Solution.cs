@@ -13,7 +13,7 @@ namespace Algorithm.BOJ.BOJ_02750
             int[] arr = new int[N];
             for (int i = 0; i < N; i++) arr[i] = int.Parse(Console.ReadLine()!);
             Array.Sort(arr);
-            Console.WriteLine(string.Join('\n', Array.ConvertAll(arr, num => num.ToString())));
+            Console.WriteLine(string.Join('\n', arr));
         }
     }
 }
