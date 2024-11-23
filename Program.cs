@@ -1,7 +1,23 @@
-﻿using Algorithm.BOJ.BOJ_02751;
+﻿using Algorithm.BOJ.BOJ_10989;
 
-foreach (string inputPath in Solution4.InputPaths)
+namespace Algorithm
 {
-    Console.SetIn(new StringReader(File.ReadAllText(inputPath)));
-    Solution4.Run([]);
+    public class Program
+    {
+        public static StreamReader InputReader { get; set; } = new(Console.OpenStandardInput());
+
+        public static void Main(string[] args)
+        {
+            foreach (string inputPath in Solution.InputPaths)
+            {
+                /* Console.ReadLine() 사용할 경우 */
+                Console.SetIn(new StringReader(File.ReadAllText(inputPath)));
+
+                /* StreamReader.ReadLine() 사용할 경우 */
+                InputReader = new(inputPath);
+
+                Solution.Run(args);
+            }
+        }
+    }
 }
