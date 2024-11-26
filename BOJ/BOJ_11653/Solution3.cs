@@ -17,6 +17,7 @@ namespace Algorithm.BOJ.BOJ_11653
         {
             int N = int.Parse(Console.ReadLine()!);
             StringBuilder answer = new();
+            // 소인수분해
             int limit = (int)Math.Sqrt(N);
             for (int i = 2; i <= limit; i++)
             {
