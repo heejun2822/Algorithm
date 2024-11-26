@@ -19,7 +19,6 @@ namespace Algorithm.BOJ.BOJ_01934
                 int A = int.Parse(ab[0]);
                 int B = int.Parse(ab[1]);
                 // 유클리드 호제법
-                if (A < B) (A, B) = (B, A);
                 int L = A * B;
                 int G = 1;
                 while (B > 0)
