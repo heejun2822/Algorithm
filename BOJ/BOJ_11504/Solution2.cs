@@ -22,7 +22,6 @@ namespace Algorithm.BOJ.BOJ_11504
                 for (int i = 0; i < N; i++)
                 {
                     int Z = 0;
-                    // for (int j = 0; j < M; j++) Z += wheel[(i + j) % N] * (int)Math.Pow(10, M - 1 - j);
                     for (int j = 0; j < M; j++) Z = 10 * Z + wheel[(i + j) % N];
                     if (Z >= X && Z <= Y) cnt++;
                 }
