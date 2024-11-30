@@ -1,10 +1,10 @@
-﻿using Algorithm.BOJ.BOJ_02346;
+﻿using Algorithm.BOJ.BOJ_24511;
 
 namespace Algorithm
 {
     public class Program
     {
-        public static StreamReader InputReader { get; set; } = new(Console.OpenStandardInput());
+        public static StreamReader InputReader { get; private set; } = new(Console.OpenStandardInput());
 
         public static void Main(string[] args)
         {
