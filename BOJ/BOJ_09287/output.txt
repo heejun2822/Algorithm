@@ -1,0 +1,4 @@
+Case 1: Fallen
+Case 2: Standing
+Case 3: Fallen
+Case 4: Fallen
