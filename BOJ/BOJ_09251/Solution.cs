@@ -12,7 +12,7 @@ namespace Algorithm.BOJ.BOJ_09251
             string str1 = Console.ReadLine()!;
             string str2 = Console.ReadLine()!;
 
-            // LCS(Longest Common Subsequence)
+            // LCS (Longest Common Subsequence)
             int[,] LCS = new int[str1.Length + 1, str2.Length + 1];
             for (int i = 0; i < str1.Length; i++)
             for (int j = 0; j < str2.Length; j++)

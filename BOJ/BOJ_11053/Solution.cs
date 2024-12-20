@@ -12,12 +12,13 @@ namespace Algorithm.BOJ.BOJ_11053
             int N = int.Parse(Console.ReadLine()!);
             int[] A = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
 
-            int[] len = Enumerable.Repeat(1, N).ToArray();
+            // LIS (Longest Increasing Subsequence)
+            int[] LIS = Enumerable.Repeat(1, N).ToArray();
             for (int i = 0; i < N; i++)
             for (int j = 0; j < i; j++)
-                if (A[i] > A[j]) len[i] = Math.Max(len[i], len[j] + 1);
+                if (A[i] > A[j]) LIS[i] = Math.Max(LIS[i], LIS[j] + 1);
 
-            Console.WriteLine(len.Max());
+            Console.WriteLine(LIS.Max());
         }
     }
 }
