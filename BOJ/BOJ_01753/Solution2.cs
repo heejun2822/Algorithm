@@ -1,0 +1,60 @@
+namespace Algorithm.BOJ.BOJ_01753
+{
+    public class Solution2
+    {
+        public static string[] InputPaths { get; private set; } =
+        [
+            "BOJ/BOJ_01753/input.txt",
+        ];
+
+        public static void Run(string[] args)
+        {
+            StreamReader sr = Program.InputReader;
+            // StreamReader sr = new(new BufferedStream(Console.OpenStandardInput()));
+            StreamWriter sw = new(new BufferedStream(Console.OpenStandardOutput()));
+
+            const int INF = 200_000;
+
+            string[] ve = sr.ReadLine()!.Split();
+            int V = int.Parse(ve[0]);
+            int E = int.Parse(ve[1]);
+            int K = int.Parse(sr.ReadLine()!);
+
+            Dictionary<int, int>[] edges = new Dictionary<int, int>[V + 1];
+            for (int i = 1; i <= V; i++) edges[i] = new();
+
+            for (int _ = 0; _ < E; _++)
+            {
+                string[] edge = sr.ReadLine()!.Split();
+                int u = int.Parse(edge[0]);
+                int v = int.Parse(edge[1]);
+                int w = int.Parse(edge[2]);
+
+                if (!edges[u].TryAdd(v, w))
+                    edges[u][v] = Math.Min(edges[u][v], w);
+            }
+
+            // 다익스트라 (Dijkstra)
+            int[] dist = new int[V + 1];
+            Array.Fill(dist, INF);
+            PriorityQueue<int, int> connected = new();
+
+            connected.Enqueue(K, dist[K] = 0);
+
+            while (connected.Count > 0)
+            {
+                int u = connected.Dequeue();
+
+                foreach (int v in edges[u].Keys)
+                    if (dist[u] + edges[u][v] < dist[v])
+                        connected.Enqueue(v, dist[v] = dist[u] + edges[u][v]);
+            }
+
+            for (int i = 1; i <= V; i++)
+                sw.WriteLine(dist[i] == INF ? "INF" : dist[i]);
+
+            sr.Close();
+            sw.Close();
+        }
+    }
+}
