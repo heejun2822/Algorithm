@@ -39,7 +39,7 @@ namespace Algorithm.BOJ.BOJ_01260
             sw.Close();
         }
 
-        // 깊이 우선 탐색 (DFS)
+        // 깊이 우선 탐색 (Depth-First Search, DFS)
         private static void DFS(int N, List<int>[] E, int S, StreamWriter sw)
         {
             bool[] visited = new bool[N + 1];
@@ -63,7 +63,7 @@ namespace Algorithm.BOJ.BOJ_01260
             sw.Write("\n");
         }
 
-        // 너비 우선 탐색 (BFS)
+        // 너비 우선 탐색 (Breadth-First Search, BFS)
         private static void BFS(int N, List<int>[] E, int S, StreamWriter sw)
         {
             bool[] visited = new bool[N + 1];
