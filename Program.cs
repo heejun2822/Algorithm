@@ -1,4 +1,4 @@
-﻿using Algorithm.BOJ.BOJ_14608;
+﻿using Algorithm.BOJ.BOJ_33524;
 
 namespace Algorithm
 {
@@ -8,7 +8,7 @@ namespace Algorithm
 
         public static void Main(string[] args)
         {
-            foreach (string inputPath in Solution2.InputPaths)
+            foreach (string inputPath in Solution.InputPaths)
             {
                 /* Console.ReadLine() 사용할 경우 */
                 Console.SetIn(new StringReader(File.ReadAllText(inputPath)));
@@ -16,7 +16,7 @@ namespace Algorithm
                 /* StreamReader.ReadLine() 사용할 경우 */
                 InputReader = new(inputPath);
 
-                Solution2.Run(args);
+                Solution.Run(args);
             }
         }
     }
