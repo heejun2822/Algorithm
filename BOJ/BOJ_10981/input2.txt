@@ -1,0 +1,11 @@
+10 3
+KAIST OriGoGi 10 1184
+Seoul_Univ Wook_Norris 8 594
+Yonsei_Univ Underwood 8 806
+Seoul_Univ cpp 10 1148
+Korea_Univ Let_Myungwoo_go_WF 10 1323
+Seoul_Univ crazy_bus_driver 8 1065
+Peking_Univ Nornir 8 837
+Seoul_Univ KimChiWarrior 8 836
+Hanyang_Univ StyleShare 8 1109
+POSTECH CHOCOLATE 8 1085
