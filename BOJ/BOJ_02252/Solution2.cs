@@ -10,6 +10,7 @@ namespace Algorithm.BOJ.BOJ_02252
             "BOJ/BOJ_02252/input2.txt",
         ];
 
+        // 위상 정렬 (Topological Sort)
         public static void Run(string[] args)
         {
             StreamReader sr = Program.InputReader;
