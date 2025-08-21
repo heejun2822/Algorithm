@@ -27,7 +27,7 @@ namespace Algorithm.PRO.PRO_CT186137_P2 // 250818 데브시스터즈 코딩테�
                 for (int j = 0; j < field.GetLength(1); j++)
                     field[i, j] = _field[i][j];
 
-            int farmSize = int.Parse(Console.ReadLine()!);
+            int farmSize = System.Text.Json.JsonSerializer.Deserialize<int>(Console.ReadLine()!);
 
             Console.WriteLine(Instance.solution(field, farmSize));
         }
