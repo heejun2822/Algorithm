@@ -2,11 +2,9 @@ namespace Algorithm.PRO.PRO_CT186137_P1 // 250818 데브시스터즈 코딩테�
 {
     using System;
 
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_CT186137_P1/input.txt",
         ];
@@ -15,7 +13,7 @@ namespace Algorithm.PRO.PRO_CT186137_P1 // 250818 데브시스터즈 코딩테�
         // 클리어할 수 있는 퀘스트의 최대 개수를 찾아라
         // 정확성 100.0 / 100.0
         // 합계   100.0 / 100.0
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int[][] _quest = System.Text.Json.JsonSerializer.Deserialize<int[][]>(Console.ReadLine()!)!;
             int[,] quest = new int[_quest.Length, _quest[0].Length];
@@ -24,7 +22,9 @@ namespace Algorithm.PRO.PRO_CT186137_P1 // 250818 데브시스터즈 코딩테�
                 for (int j = 0; j < quest.GetLength(1); j++)
                     quest[i, j] = _quest[i][j];
 
-            Console.WriteLine(Instance.solution(quest));
+            int answer = solution(quest);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int[,] quest)

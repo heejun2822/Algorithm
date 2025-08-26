@@ -2,18 +2,16 @@ namespace Algorithm.PRO.PRO_1844 // 게임 맵 최단거리
 {
     using System;
 
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_1844/input1.txt",
             "PRO/PRO_1844/input2.txt",
         ];
 
         // 시간 초과
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int[][] _maps = System.Text.Json.JsonSerializer.Deserialize<int[][]>(Console.ReadLine()!)!;
             int[,] maps = new int[_maps.Length, _maps[0].Length];
@@ -22,7 +20,9 @@ namespace Algorithm.PRO.PRO_1844 // 게임 맵 최단거리
                 for (int j = 0; j < maps.GetLength(1); j++)
                     maps[i, j] = _maps[i][j];
 
-            Console.WriteLine(Instance.solution(maps));
+            int answer = solution(maps);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int[,] maps)

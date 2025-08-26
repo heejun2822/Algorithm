@@ -1,20 +1,20 @@
 namespace Algorithm.PRO.PRO_12929 // 올바른 괄호의 갯수
 {
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_12929/input1.txt",
             "PRO/PRO_12929/input2.txt",
         ];
 
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int n = System.Text.Json.JsonSerializer.Deserialize<int>(Console.ReadLine()!);
 
-            Console.WriteLine(Instance.solution(n));
+            int answer = solution(n);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int n)

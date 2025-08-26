@@ -1,10 +1,8 @@
 namespace Algorithm.PRO.PRO_258707 // n + 1 카드게임
 {
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_258707/input1.txt",
             "PRO/PRO_258707/input2.txt",
@@ -12,12 +10,14 @@ namespace Algorithm.PRO.PRO_258707 // n + 1 카드게임
             "PRO/PRO_258707/input4.txt",
         ];
 
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int coin = System.Text.Json.JsonSerializer.Deserialize<int>(Console.ReadLine()!);
             int[] cards = System.Text.Json.JsonSerializer.Deserialize<int[]>(Console.ReadLine()!)!;
 
-            Console.WriteLine(Instance.solution(coin, cards));
+            int answer = solution(coin, cards);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int coin, int[] cards)

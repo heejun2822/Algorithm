@@ -2,16 +2,14 @@ namespace Algorithm.PRO.PRO_49189 // 가장 먼 노드
 {
     using System.Collections.Generic;
 
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_49189/input.txt",
         ];
 
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int n = System.Text.Json.JsonSerializer.Deserialize<int>(Console.ReadLine()!);
 
@@ -22,7 +20,9 @@ namespace Algorithm.PRO.PRO_49189 // 가장 먼 노드
                 for (int j = 0; j < edge.GetLength(1); j++)
                     edge[i, j] = _edge[i][j];
 
-            Console.WriteLine(Instance.solution(n, edge));
+            int answer = solution(n, edge);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int n, int[,] edge)

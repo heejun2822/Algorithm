@@ -2,21 +2,21 @@ namespace Algorithm.PRO.PRO_12904 // 가장 긴 팰린드롬
 {
     using System;
 
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_12904/input1.txt",
             "PRO/PRO_12904/input2.txt",
         ];
 
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             string s = System.Text.Json.JsonSerializer.Deserialize<string>(Console.ReadLine()!)!;
 
-            Console.WriteLine(Instance.solution(s));
+            int answer = solution(s);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(string s)

@@ -2,9 +2,9 @@ namespace Algorithm.BOJ.BOJ_10798
 {
     using System.Text;
 
-    public class Solution2
+    public class Solution2 : SolutionBOJ<Solution2>, ISolutionBOJ
     {
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "BOJ/BOJ_10798/input1.txt",
             "BOJ/BOJ_10798/input2.txt",

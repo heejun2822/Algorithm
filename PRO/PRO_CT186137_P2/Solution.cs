@@ -2,11 +2,9 @@ namespace Algorithm.PRO.PRO_CT186137_P2 // 250818 데브시스터즈 코딩테�
 {
     using System;
 
-    class Solution
+    public class Solution : SolutionPRO<Solution>, ISolutionPRO
     {
-        private static Solution Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_CT186137_P2/input1.txt",
             "PRO/PRO_CT186137_P2/input2.txt",
@@ -18,7 +16,7 @@ namespace Algorithm.PRO.PRO_CT186137_P2 // 250818 데브시스터즈 코딩테�
         // 농장을 만들기 위해 치워야 되는 바위의 최소 개수를 찾아라 (농장을 만들 수 있는 방법이 없으면 -1)
         // 정확성 100.0 / 100.0
         // 합계   100.0 / 100.0
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             int[][] _field = System.Text.Json.JsonSerializer.Deserialize<int[][]>(Console.ReadLine()!)!;
             int[,] field = new int[_field.Length, _field[0].Length];
@@ -29,7 +27,9 @@ namespace Algorithm.PRO.PRO_CT186137_P2 // 250818 데브시스터즈 코딩테�
 
             int farmSize = System.Text.Json.JsonSerializer.Deserialize<int>(Console.ReadLine()!);
 
-            Console.WriteLine(Instance.solution(field, farmSize));
+            int answer = solution(field, farmSize);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public int solution(int[,] field, int farmSize)

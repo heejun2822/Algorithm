@@ -1,8 +1,8 @@
 namespace Algorithm.BOJ.BOJ_14681
 {
-    public class Solution
+    public class Solution : SolutionBOJ<Solution>, ISolutionBOJ
     {
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "BOJ/BOJ_14681/input1.txt",
             "BOJ/BOJ_14681/input2.txt",

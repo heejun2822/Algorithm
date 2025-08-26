@@ -2,17 +2,15 @@ namespace Algorithm.PRO.PRO_CT186137_P3 // 250818 데브시스터즈 코딩테�
 {
     using System;
 
-    class Solution2
+    public class Solution2 : SolutionPRO<Solution2>, ISolutionPRO
     {
-        private static Solution2 Instance { get; } = new();
-
-        public static string[] InputPaths { get; private set; } =
+        public static string[] InputPaths { get; set; } =
         [
             "PRO/PRO_CT186137_P3/input1.txt",
             "PRO/PRO_CT186137_P3/input2.txt",
         ];
 
-        public static void Run(string[] args)
+        public override void Run(string[] args)
         {
             double[][] _objectBallPosList = System.Text.Json.JsonSerializer.Deserialize<double[][]>(Console.ReadLine()!)!;
             double[,] objectBallPosList = new double[_objectBallPosList.Length, _objectBallPosList[0].Length];
@@ -23,7 +21,9 @@ namespace Algorithm.PRO.PRO_CT186137_P3 // 250818 데브시스터즈 코딩테�
 
             double[] hitVector = System.Text.Json.JsonSerializer.Deserialize<double[]>(Console.ReadLine()!)!;
 
-            Console.WriteLine(Instance.solution(objectBallPosList, hitVector));
+            int answer = solution(objectBallPosList, hitVector);
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(answer));
         }
 
         public const double BallDiameter = 2;

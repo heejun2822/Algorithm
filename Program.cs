@@ -8,16 +8,16 @@ namespace Algorithm
 
         public static void Main(string[] args)
         {
-            foreach (string inputPath in Solution.InputPaths)
-            {
-                /* Console.ReadLine() 사용할 경우 */
-                Console.SetIn(new StringReader(File.ReadAllText(inputPath)));
+            new Solution().Solve(args);
+        }
 
-                /* StreamReader.ReadLine() 사용할 경우 */
-                InputReader = new(inputPath);
+        public static void SetReader(string path)
+        {
+            /* Console.ReadLine() 사용할 경우 */
+            Console.SetIn(new StringReader(File.ReadAllText(path)));
 
-                Solution.Run(args);
-            }
+            /* StreamReader.ReadLine() 사용할 경우 */
+            InputReader = new(path);
         }
     }
 }
