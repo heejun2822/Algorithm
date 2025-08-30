@@ -1,0 +1,68 @@
+namespace Algorithm.BOJ.BOJ_08073
+{
+    public class Solution : SolutionBOJ<Solution>, ISolutionBOJ
+    {
+        public static string[] InputPaths { get; set; } =
+        [
+            "BOJ/BOJ_08073/input.txt",
+        ];
+
+        public static void Run(string[] args)
+        {
+            StreamReader sr = Program.InputReader;
+            // StreamReader sr = new(new BufferedStream(Console.OpenStandardInput()));
+            StreamWriter sw = new(new BufferedStream(Console.OpenStandardOutput()));
+
+            int n = ReadInt(sr);
+
+            int[,] distances = new int[n, n];
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++)
+                    distances[i, j] = ReadInt(sr);
+
+            System.Text.StringBuilder output = new();
+
+            for (int a = 0; a < n; a++)
+            {
+                for (int b = a + 1; b < n; b++)
+                {
+                    bool isNeighbour = true;
+
+                    for (int c = 0; c < n; c++)
+                    {
+                        if (c == a || c == b) continue;
+
+                        if (distances[a, c] + distances[c, b] == distances[a, b])
+                        {
+                            isNeighbour = false;
+                            break;
+                        }
+                    }
+
+                    if (isNeighbour)
+                        output.AppendLine($"{a + 1} {b + 1}");
+                }
+            }
+
+            sw.Write(output);
+
+            sr.Close();
+            sw.Close();
+        }
+
+        private static int ReadInt(StreamReader sr)
+        {
+            int c, val = 0, sign = 1;
+            while (true)
+            {
+                c = sr.Read();
+                if (c == ' ' || c == '\n' || c == -1) break;
+                if (c == '\r') { sr.Read(); break; }
+                if (c == '-') { sign = -1; continue; }
+                val = val * 10 + c - '0';
+            }
+            return val * sign;
+        }
+    }
+}
