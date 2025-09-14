@@ -1,19 +1,65 @@
 # Algorithm
 
-### Hi there 👋
-[![Heejun's GitHub stats](https://github-readme-stats.vercel.app/api?username=heejun2822&count_private=true&show_icons=true&theme=synthwave)](https://github.com/anuraghazra/github-readme-stats)
+각각의 플랫폼의 일반적인 제출 형식에 맞춰 구조를 잡았습니다.
 
-<!--
-**heejun2822/heejun2822** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+1. Baekjoon Online Judge (BOJ)
+     ```C#
+     // BOJ Solution 구조
+     namespace Algorithm.BOJ.BOJ_00000
+     {
+         public class Solution : SolutionBOJ<Solution>, ISolutionBOJ
+         {
+             public static string[] InputPaths { get; set; } =
+             [
+                 "BOJ/BOJ_00000/input.txt",
+             ];
 
-Here are some ideas to get you started:
+             public static void Run(string[] args)
+             {
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+             }
+         }
+     }
+
+     // BOJ 제출 형식
+     public class Solution
+     {
+         public static void Main(string[] args)
+         {
+             
+         }
+     }
+     ```
+2. Programmers (PRO)
+   ```C#
+   // PRO Solution 구조
+   namespace Algorithm.PRO.PRO_00000 // 문제 제목
+   {
+       public class Solution : SolutionPRO<Solution>, ISolutionPRO
+       {
+           public static string[] InputPaths { get; set; } =
+           [
+               "PRO/PRO_00000/input.txt",
+           ];
+
+           public override void Run(string[] args)
+           {
+
+           }
+
+           public var solution(var input)
+           {
+
+           }
+       }
+   }
+
+   // PRO 제출 형식
+   public class Solution
+   {
+       public var solution(var input)
+       {
+           
+       }
+   }
+   ```
