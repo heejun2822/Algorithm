@@ -1,4 +1,4 @@
-﻿using Algorithm.BOJ.BOJ_03495;
+﻿using Algorithm.BOJ.BOJ_22867;
 
 namespace Algorithm
 {
@@ -8,7 +8,7 @@ namespace Algorithm
 
         public static void Main(string[] args)
         {
-            new Solution2().Solve(args);
+            new Solution().Solve(args);
         }
 
         public static void SetReader(string path)
