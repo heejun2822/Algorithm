@@ -1,0 +1,11 @@
+5
+6
+I am Sam
+20
+A mobile phone is an electronic device used for longrange mobile telecommunications over a cellular network of specialized base stations known as cell sites
+16
+For each test case output an integer indicating the number of lines needed to display the text according to the manner described above
+16
+A thumb that completely fills the trough indicates that the entire document is being viewed at which point the scrollbar may temporarily become hidden
+7
+Abcdefg hijklmn opqrstu vwxyz
