@@ -1,4 +1,4 @@
-﻿using Algorithm.BOJ.BOJ_02058;
+﻿using Algorithm.BOJ.BOJ_17371;
 
 namespace Algorithm
 {
